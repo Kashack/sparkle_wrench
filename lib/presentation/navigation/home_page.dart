@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:sparkle_wrench/presentation/navigation/records_page.dart';
+import 'package:sparkle_wrench/presentation/user_profile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                 ),
-                itemCount: 5,
+                itemCount: services.length,
                 itemBuilder: (context, index) {
                   return GestureDetector(
                     onTap: () {
@@ -49,14 +50,14 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(
-                            'assets/icons/car_services.svg',
+                            services[index]['image'],
                             height: 30,
                             width: 30,
                           ),
                           const SizedBox(
                             height: 10,
                           ),
-                          Text('Training')
+                          Text(services[index]['text'])
                         ],
                       ),
                     ),
@@ -70,3 +71,33 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+List<Map<String, dynamic>> services = [
+  {'text': 'Veterian', 'image': 'assets/icons/car_services.svg', 'navigation': UserProfile()},
+  {
+    'text': 'Grooming',
+    'image': 'assets/icons/wheel.svg',
+    'navigation':  UserProfile()
+  },
+  {
+    'text': 'Pet boarding',
+    'image': 'assets/icons/painting.svg',
+    'navigation':  UserProfile()
+  },
+  {
+    'text': 'Adoption',
+    'image': 'assets/icons/ac_repair.svg',
+    'navigation':  UserProfile()
+  },
+  {
+    'text': 'Dog walking',
+    'image': 'assets/icons/car_wash.svg',
+    'navigation':  UserProfile()
+  },
+  {
+    'text': 'Training',
+    'image': 'assets/icons/insurance_claims.svg',
+    'navigation': UserProfile()
+  },
+
+];

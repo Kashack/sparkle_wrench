@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sparkle_wrench/presentation/navigation/home_page.dart';
+import 'package:sparkle_wrench/presentation/navigation/nav_page.dart';
 
 class Authentication {
   final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -25,7 +26,7 @@ class Authentication {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => HomePage(),
+            builder: (context) => BottomNavigationPages(),
           ),
           (route) => false,
         );
@@ -45,7 +46,7 @@ class Authentication {
     return false;
   }
 
-  Future<bool> PatientCreateAnAccount(
+  Future<bool> CreateAnAccount(
       {required String fullname,
       required String email,
       required String password}) async {
