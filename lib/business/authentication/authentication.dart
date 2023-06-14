@@ -61,7 +61,7 @@ class Authentication {
           Navigator.pushAndRemoveUntil(
             context,
             MaterialPageRoute(
-              builder: (context) => HomePage(),
+              builder: (context) => BottomNavigationPages(),
             ),
             (route) => false,
           );

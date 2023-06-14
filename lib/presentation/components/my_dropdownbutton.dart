@@ -44,7 +44,7 @@ class _MyDropdownButtonState extends State<MyDropdownButton> {
       ),
       decoration: InputDecoration(
         border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide.none),
         fillColor: Colors.grey.shade200,
         filled: true,
