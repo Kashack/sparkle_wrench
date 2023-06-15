@@ -10,6 +10,7 @@ class BookGeneralCarService extends StatefulWidget {
   final String carId;
   final String carName;
   final String carModel;
+  final String carPicUrl;
   final String carNumber;
   final String serviceType;
   final String carColor;
@@ -21,7 +22,7 @@ class BookGeneralCarService extends StatefulWidget {
     required this.serviceType,
     required this.carModel,
     required this.carNumber,
-    required this.carColor,
+    required this.carColor, required this.carPicUrl,
   }) : super(key: key);
 
   @override
@@ -232,7 +233,7 @@ class _BookGeneralCarServiceState extends State<BookGeneralCarService> {
                           carModel: widget.carModel,
                           carNumber: widget.carNumber,
                           carColor: widget.carColor,
-                          carUid: widget.carId, serviceType: widget.serviceType,
+                          carUid: widget.carId, serviceType: widget.serviceType, carPicUrl: widget.carPicUrl,
                         );
                         setState(() {
                           _isLoading = check;

@@ -25,6 +25,7 @@ class _SelectCarState extends State<SelectCar> {
   String? kcarName;
 
   String? kcarModel;
+  String? kcarPicUrl;
 
   String? kcarNumber;
 
@@ -83,6 +84,7 @@ class _SelectCarState extends State<SelectCar> {
                                   String carColor = data['car_color'];
                                   String carModel = data['car_model'];
                                   String carNumber = data['car_number'];
+                                  String carPicUrl = data['carPicUrl'];
                                   return Padding(
                                     padding:
                                         const EdgeInsets.symmetric(vertical: 8.0),
@@ -209,7 +211,7 @@ class _SelectCarState extends State<SelectCar> {
                             carName: kcarName!,
                             carModel: kcarModel!,
                             carNumber: kcarNumber!,
-                            carId: tag!, carColor: kcarColor!, serviceType: widget.serviceType,
+                            carId: tag!, carColor: kcarColor!, serviceType: widget.serviceType, carPicUrl: kcarPicUrl!,
                           ),
                         ));
                   }else{
