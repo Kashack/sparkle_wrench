@@ -6,7 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sparkle_wrench/presentation/user_profile.dart';
+import 'package:sparkle_wrench/presentation/settings_screens/user_profile.dart';
 
 import '../../business/constants/constant.dart';
 import '../../business/database_helper.dart';

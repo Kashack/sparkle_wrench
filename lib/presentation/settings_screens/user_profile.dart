@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import '../business/constants/constant.dart';
-import '../business/database_helper.dart';
-import 'components/my_dropdownbutton.dart';
-import 'components/text_form_field.dart';
+import '../../business/constants/constant.dart';
+import '../../business/database_helper.dart';
+import '../components/my_dropdownbutton.dart';
+import '../components/text_form_field.dart';
 
 class UserProfile extends StatefulWidget {
   @override
