@@ -46,6 +46,11 @@ class _BookGeneralCarServiceState extends State<BookGeneralCarService> {
       return mainDate;
     }
   }
+  @override
+  void initState() {
+    super.initState();
+    selectedDate = checkTime();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -216,6 +221,13 @@ class _BookGeneralCarServiceState extends State<BookGeneralCarService> {
                     child: CustomButton(
                       buttonText: 'Book Service',
                       onPressed: () async {
+                        print( DateTime(
+                          selectedDate.year,
+                          selectedDate.month,
+                          selectedDate.day,
+                          timeAppointment!.hour,
+                          timeAppointment!.minute,
+                        ));
                         setState(() {
                           _isLoading = true;
                         });

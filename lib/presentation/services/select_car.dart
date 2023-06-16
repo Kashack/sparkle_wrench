@@ -95,6 +95,7 @@ class _SelectCarState extends State<SelectCar> {
                                           kcarName = carName;
                                           kcarNumber = carNumber;
                                           kcarModel = carModel;
+                                          kcarPicUrl = carPicUrl;
                                           kcarColor = carColor;
                                           tag = (selected ? document.id : null)!;
                                         });

@@ -16,7 +16,7 @@ class PastAppointment extends StatelessWidget {
     final Stream<QuerySnapshot> upcomingStream = _firestore
         .collection('appointments')
         .where('userUid', isEqualTo: _auth.currentUser!.uid)
-        .where('appointment_status', whereIn: ['Cancelled', 'Complete'])
+        .where('appointment_status', whereIn: ['Cancelled', 'Completed'])
         .orderBy('bookDate')
         .snapshots();
     return Scaffold(
